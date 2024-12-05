@@ -3,10 +3,10 @@
     /* For Font */
     /* User No Need To Install On The Their Machine */
     font-family: "Press Start 2P";
-    src: url("fonts/PressStart2P.eot")  format("eot") ,
-         url("fonts/PressStart2P.woff") format("woff"),
-         url("fonts/PressStart2P.tff")  format("truetype")
-         url("fonts/PressStart2P.svg")  format("svg");
+    src: url("../Fonts/")  format("eot") ,
+         url("../Fonts/") format("woff"),
+         url("../Fonts/")  format("truetype")
+         url("../Fonts/")  format("svg");
 }
 .container {
     background-color: aqua;
