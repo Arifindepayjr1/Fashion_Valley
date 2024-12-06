@@ -45,3 +45,8 @@ body
     background-color: beige;
     font-family: "Comic Sans" , sans-serif;
 }
+a 
+{
+    text-decoration: none;  /* remove any decoration( underline , overline , line through ) 
+                               that applied to this <a> element */
+}
