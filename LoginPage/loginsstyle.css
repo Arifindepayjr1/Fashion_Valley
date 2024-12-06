@@ -1,17 +1,44 @@
+/* Font */
+/* User No Need To Install On The Their Machine */
 @font-face 
 {
-    /* For Font */
-    /* User No Need To Install On The Their Machine */
     font-family: "Comic Sans";
-    src: url("../Fonts/EOT/Ldfcomicsans-jj7l.eot")  format("eot") ,
-         url("../Fonts/WOFF/Ldfcomicsans-jj7l.woff") format("woff"),
-         url("../Fonts/TTF/Ldfcomicsans-jj7l.ttf")  format("truetype")
-         url("../Fonts/SVG/Ldfcomicsans-jj7l.svg")  format("svg");
+    src: url("../Fonts/EOT/Ldfcomicsans-jj7l.eot")              format("eot") ,
+         url("../Fonts/WOFF/Ldfcomicsans-jj7l.woff")            format("woff"),
+         url("../Fonts/TTF/Ldfcomicsans-jj7l.ttf")              format("truetype") ,
+         url("../Fonts/SVG/Ldfcomicsans-jj7l.svg")              format("svg");
 }
+@font-face 
+{
+    font-family: "Comic Sans";
+    src: url("../Fonts/EOT/Ldfcomicsansbold-zgma.eot")          format("eof") ,
+         url("../Fonts/WOFF/Ldfcomicsansbold-zgma.woff")        format("woff") ,
+         url("../Fonts/TTF/Ldfcomicsansbold-zgma.ttf")          format("truetype") ,
+         url("../Fonts/SVG/Ldfcomicsansbold-zgma.svg")          format("svg");
+}
+@font-face
+{
+    font-family: "Comic Sans";
+    src: url("../Fonts/EOT/Ldfcomicsanshairline-5PmL.eot")      format("eot") ,
+         url("../Fonts/WOFF/Ldfcomicsanshairline-5PmL.woff")    format("woff") ,
+         url("../Fonts/TTF/Ldfcomicsanshairline-5PmL.ttf")      format("truetype") ,
+         url("../Fonts/SVG/Ldfcomicsanshairline-5PmL.svg")      format("svg");
+}
+@font-face
+{
+    font-family: "Comic Sans";
+    src: url("../Fonts/EOT/Ldfcomicsanslight-6dZo.eot")         format("eot") ,
+         url("../Fonts/WOFF/Ldfcomicsanslight-6dZo.woff")       format("woff") ,
+         url("../Fonts/TTF/Ldfcomicsanslight-6dZo.ttf")         format("truetype") ,
+         url("../Fonts/SVG/Ldfcomicsanslight-6dZo.svg")         format("svg");
+}
+
+
 .container {
     background-color: aqua;
     border: 2px rgb(255 , 0 , 0);
 }
+
 body
 {
     background-color: beige;
