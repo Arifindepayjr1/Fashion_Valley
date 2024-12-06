@@ -2,11 +2,11 @@
 {
     /* For Font */
     /* User No Need To Install On The Their Machine */
-    font-family: "Press Start 2P";
-    src: url("../Fonts/")  format("eot") ,
-         url("../Fonts/") format("woff"),
-         url("../Fonts/")  format("truetype")
-         url("../Fonts/")  format("svg");
+    font-family: "Comic Sans";
+    src: url("../Fonts/EOT/Ldfcomicsans-jj7l.eot")  format("eot") ,
+         url("../Fonts/WOFF/Ldfcomicsans-jj7l.woff") format("woff"),
+         url("../Fonts/TTF/Ldfcomicsans-jj7l.ttf")  format("truetype")
+         url("../Fonts/SVG/Ldfcomicsans-jj7l.svg")  format("svg");
 }
 .container {
     background-color: aqua;
@@ -15,5 +15,5 @@
 body
 {
     background-color: beige;
-    font-family: "Press Start 2P" , sans-serif;
+    font-family: "Comic Sans" , sans-serif;
 }
