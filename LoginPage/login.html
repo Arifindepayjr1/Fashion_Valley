@@ -14,7 +14,7 @@
 <!-- Display in the main Browser -->
     <body>
 
-<!-- Entire Box -->
+<!-- Entire container -->
     <div class = "container">
         <h1> Login </h1>
 
@@ -27,7 +27,8 @@
                            maxlength   = "1000"
                            name        = "username"
                            placeholder = "Username or email"
-                           required    = "required">
+                           required    = "required"
+                           class       = "username">
                 </label>
 
                 <br/>
@@ -37,7 +38,8 @@
                            maxlength   = "1000"
                            name        = "password"
                            placeholder = "password"
-                           required    = "required">
+                           required    = "required"
+                           class       = "password"/>
                 </label>
 
                 <br/>
@@ -45,13 +47,15 @@
                 <label id = "signin">
                     <input type        = "submit"
                            name        = "signin"
-                           value       = "Sign In"/>
+                           value       = "Sign In"
+                           class       = "submit"/>
                 </label>
             </form>
         </div>
 
 <!-- Link to register -->
-        <a href     = "register.html"> Don't have account? Sign Up </a>
+        <a href     = "register.html" 
+           id       = "register"> Don't have account? Sign Up </a>
 
         <br />
 
