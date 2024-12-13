@@ -202,7 +202,7 @@ footer {
 /* Last Footer Section */
 .last-footer {
   background-color: #00aaff;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 10px;
 }
