@@ -1,0 +1,76 @@
+/* General footer styles */
+footer {
+  background-color: #d9d9d9;
+  padding: 40px 20px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: black;
+}
+
+/* Top section (Payment Method & Follow Us) */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.payment-method,
+.follow-us {
+  flex: 1;
+  text-align: center;
+}
+
+.payment-icons img,
+.social-icons img {
+  margin: 5px;
+  width: 40px;
+}
+
+/* Middle Section (Row Layout) */
+.middle-section {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.middle-section > div {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.middle-section h3 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+.middle-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.middle-section ul li {
+  margin: 5px 0;
+}
+
+.middle-section ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.middle-section ul li a:hover {
+  color: #00aaff;
+}
+
+/* Last Footer Section */
+.last-footer {
+  background-color: #00aaff;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.last-footer p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
