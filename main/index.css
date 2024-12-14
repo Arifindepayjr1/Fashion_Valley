@@ -32,6 +32,11 @@
          url("../Fonts/SVG/Ldfcomicsanslight-6dZo.svg")         format("svg");
 }
 
+@font-face 
+{
+  font-family: "Genty1";
+  src: url("../Fonts/GentyDemo-Regular.ttf") format("truetype") ,
+}
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
 .container, .container-sm, .container-md {
   margin-right: auto;
@@ -766,6 +771,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
+  font-family: "Genty1" , monospace;
 }
 
 .main-nav .nav-links {
@@ -856,7 +862,6 @@ header h1 {
   font-weight: 100;
   text-transform: uppercase;
   line-height: 1.2;
-  margin: 0;
 }
 
 @media (min-width: 544px) {
@@ -971,4 +976,63 @@ footer .social-links ul li a {
 
 .nav-links a:hover {
   color: #007BFF;
+}
+header {
+  position: relative;
+  width: 100%;
+}
+
+.img-absolute {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensures the background image stays behind */
+}
+
+.pic1 {
+  display: flex;
+  justify-content: center; /* Horizontally center the image */
+  align-items: center; /* Vertically center the image */
+  height: 500px; /* Match the image's height or adjust as needed */
+  position: relative;
+}
+
+.pic1 img { /* You can change the size of the image here */
+  height: 500px;
+}
+/* Styles for img-absolute */
+.img-absolute {
+  display: block; /* Ensures the image occupies space */
+  margin: 0 auto; /* Centers the image horizontally */
+  width: 100%; /* Set full width for responsiveness */
+  max-width: 800px; /* Optional: Set max width to avoid overly large images */
+  height: auto; /* Maintains aspect ratio */
+}
+
+
+
+/* Styles for box1 */
+.box1 {
+  border-radius: 20px;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  width: 500px;
+  height: 500px;
+  background-image: url("../main/asset/landing1.jpg");
+  background-size: cover; /* Ensures the image covers the box */
+  background-position: center; /* Centers the image inside the box */
+}
+
+/* Styles for box2 */
+.box2 {
+  display: inline;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  width: 1000px;
+  height: 500px;
+  background-image: url("../main/asset/landing2.jpg");
+  background-size: cover;
+  background-position:center;
 }
