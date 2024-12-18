@@ -36,7 +36,8 @@ h1 {
   margin-bottom: 2rem;
 }
 
-.cart-table th, .cart-table td {
+.cart-table th,
+.cart-table td {
   padding: 1rem;
   border-bottom: 1px solid #ddd;
   text-align: center;
