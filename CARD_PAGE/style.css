@@ -16,8 +16,9 @@ body {
 /* Left Side - Product Image */
 .product-image {
   flex: 1;
-  margin-left: 200px;
+  margin-left: auto;
   margin-bottom: 200px;
+  margin-right: auto;
 }
 
 .product-image img {
