@@ -1,121 +1,54 @@
 /* Font */
-/* User No Need To Install On The Their Machine */
-
-@font-face 
-{
-    font-family: "Comic Sans";
-    src: url("../Fonts/EOT/Ldfcomicsans-jj7l.eot")              format("eot") ,
-         url("../Fonts/WOFF/Ldfcomicsans-jj7l.woff")            format("woff"),
-         url("../Fonts/TTF/Ldfcomicsans-jj7l.ttf")              format("truetype") ,
-         url("../Fonts/SVG/Ldfcomicsans-jj7l.svg")              format("svg");
-}
-@font-face 
-{
-    font-family: "Comic Sans";
-    src: url("../Fonts/EOT/Ldfcomicsansbold-zgma.eot")          format("eof") ,
-         url("../Fonts/WOFF/Ldfcomicsansbold-zgma.woff")        format("woff") ,
-         url("../Fonts/TTF/Ldfcomicsansbold-zgma.ttf")          format("truetype") ,
-         url("../Fonts/SVG/Ldfcomicsansbold-zgma.svg")          format("svg");
-}
-@font-face
-{
-    font-family: "Comic Sans";
-    src: url("../Fonts/EOT/Ldfcomicsanshairline-5PmL.eot")      format("eot") ,
-         url("../Fonts/WOFF/Ldfcomicsanshairline-5PmL.woff")    format("woff") ,
-         url("../Fonts/TTF/Ldfcomicsanshairline-5PmL.ttf")      format("truetype") ,
-         url("../Fonts/SVG/Ldfcomicsanshairline-5PmL.svg")      format("svg");
-}
-@font-face
-{
-    font-family: "Comic Sans";
-    src: url("../Fonts/EOT/Ldfcomicsanslight-6dZo.eot")         format("eot") ,
-         url("../Fonts/WOFF/Ldfcomicsanslight-6dZo.woff")       format("woff") ,
-         url("../Fonts/TTF/Ldfcomicsanslight-6dZo.ttf")         format("truetype") ,
-         url("../Fonts/SVG/Ldfcomicsanslight-6dZo.svg")         format("svg");
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
 }
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background: #111;
-  width: 100%;
   overflow: hidden;
-}
-.ring {
   position: relative;
-  width: 600px;
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.ring i {
-  position: absolute;
-  inset: 0;
-  border: 2px solid #fff;
-  transition: 0.5s;
-}
-.ring i:nth-child(1) {
-  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-  animation: animate 6s linear infinite;
-}
-.ring i:nth-child(2) {
-  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
-  animation: animate 4s linear infinite;
-}
-.ring i:nth-child(3) {
-  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
-  animation: animate2 10s linear infinite;
-}
-.ring:hover i {
-  border: 6px solid var(--clr);
-  filter: drop-shadow(0 0 20px var(--clr));
-}
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes animate2 {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-.login {
-  position: absolute;
-  width: 300px;
+
+.login-container {
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 20px;
 }
-.login h2 {
-  font-size: 2em;
+
+.login {
+  width: 300px;
+  padding: 30px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
   color: #fff;
 }
-.login .inputBx {
+
+.login h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.inputBx {
   position: relative;
   width: 100%;
+  margin-bottom: 20px;
 }
-.login .inputBx input {
-  position: relative;
+
+.inputBx input {
   width: 100%;
   padding: 12px 20px;
   background: transparent;
@@ -125,42 +58,40 @@ body {
   color: #fff;
   box-shadow: none;
   outline: none;
+  transition: 0.3s ease;
 }
-.login .inputBx input[type="submit"] {
-  width: 100%;
-  background: #0078ff;
+
+.inputBx input[type="submit"] {
   background: linear-gradient(45deg, #ff357a, #fff172);
   border: none;
   cursor: pointer;
+  color: #fff;
+  font-size: 1.2em;
 }
-.login .inputBx input::placeholder {
-  color: rgba(255, 255, 255, 0.75);
+
+.inputBx input[type="submit"]:hover {
+  background: linear-gradient(45deg, #ff357a, #ff6ec7);
 }
-.login .links {
-  position: relative;
-  width: 100%;
+
+.inputBx input:focus {
+  border: 2px solid #00ff0a;
+  box-shadow: 0 0 10px #00ff0a;
+}
+
+.links {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding-top: 10px;
 }
-.login .links a {
+
+.links a {
   color: #fff;
   text-decoration: none;
+  font-size: 0.9em;
 }
-.login .inputBx input:focus {
-  border: 2px solid #00ff0a; /* Green border when focused */
-  box-shadow: 0 0 10px #00ff0a; /* Add glow effect */
-  transition: 0.3s ease; /* Smooth transition */
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #000; /* Solid black */
-  overflow: hidden;
-  position: relative;
+
+.links a:hover {
+  color: #00ff0a;
 }
 
 body::before {
@@ -173,36 +104,4 @@ body::before {
   background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
   opacity: 0.6;
   pointer-events: none;
-  animation: glow 8s infinite alternate;
-}
-
-body::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('https://i.imgur.com/o8EdyU0.png') repeat; /* Subtle particle texture */
-  opacity: 0.03;
-  pointer-events: none;
-  animation: particles 20s linear infinite;
-}
-
-@keyframes glow {
-  0% {
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 0.8;
-  }
-}
-
-@keyframes particles {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100vw 100vh;
-  }
 }
