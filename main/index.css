@@ -561,120 +561,114 @@ h6 {
   -webkit-transform: rotate(45deg) translate(-6px, -6px);
   transform: rotate(45deg) translate(-6px, -6px);
 }
-
-.main-nav {
-  display: block;
-  padding: 1rem 2rem;
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  background: #111;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+/* Main Navigation */
+nav {
+  background-color: #000; /* Black background for the nav */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
 }
 
-.main-nav > .content-wrapper-sm {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+ul.nav-links {
+  list-style: none;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  gap: 20px;
+}
+
+ul.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+ul.nav-links li a:hover {
+  color: #00aaff; /* Highlight color on hover */
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
   align-items: center;
 }
 
-@media (min-width: 768px) {
-  .main-nav {
-    background: transparent;
-    border: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+.search-input {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 150px;
+  transition: width 0.4s ease-in-out;
+}
+
+.search-input:focus {
+  width: 200px; /* Expands the search bar on focus */
+  background-color: #222;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  ul.nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    display: none; /* Hidden by default */
+  }
+
+  ul.nav-links.show {
+    display: flex; /* Show menu when toggled */
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
 }
 
-.main-nav .navbar-brand {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #ffffff;
-  text-decoration: none;
-  font-family: "Genty1", monospace;
-}
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
 
-.main-nav .nav-links {
-  position: relative;
-  top: auto;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: none;
-  overflow: hidden;
-  height: 0;
-  background: transparent;
-}
+  ul.nav-links li a {
+    font-size: 0.9rem;
+  }
 
-@media (min-width: 768px) {
-  .main-nav .nav-links {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: auto;
+  .search-input {
+    width: 100px;
+  }
+
+  .search-input:focus {
+    width: 150px;
   }
 }
 
-.main-nav .nav-links li {
-  margin: 1rem;
-  text-align: center;
-}
-
-.main-nav .nav-links li a {
-  color: #fefffe;
-  display: block;
-  text-decoration: none;
-}
-
-.main-nav .nav-open {
-  position: absolute;
-  top: 133%;
-  width: 100%;
-  display: block;
-  height: auto;
-  background: #111;
-}
-
-.main-nav .nav-open li {
-  margin: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.main-nav .nav-open li a {
-  padding: 2rem 0;
-}
-
-.fixed-nav {
-  background: #111;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-}
 
 header {
   position: relative;
-  height: 100vh;
+  height: 75vh;
   color: #ffffff;
   text-align: center;
   display: -webkit-box;
@@ -737,25 +731,7 @@ footer {
   padding: 2rem;
 }
 
-footer .social-links ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
 
-footer .social-links ul li {
-  margin: 1rem;
-  text-align: center;
-}
-
-footer .social-links ul li a {
-  font-size: 1.5rem;
-  color: #fefffe;
-  display: block;
-}
 /* Style for the search bar container */
 .search-container {
   position: relative;
@@ -846,36 +822,59 @@ header {
   height: auto; /* Maintains aspect ratio */
 }
 
+/* General styles for the grid */
+.grid {
+  display: flex;
+  flex-wrap: wrap; /* Allows boxes to stack on smaller screens */
+  gap: 20px; /* Adds space between the boxes */
+  justify-content: center; /* Centers the content */
+}
+
 /* Styles for box1 */
 .box1 {
   border-radius: 20px;
-  border-style: solid;
-  border-color: rgb(0, 0, 0);
-  width: 500px;
-  height: 500px;
+  border: 1px solid rgb(0, 0, 0);
+  width: 100%; /* Default to full width */
+  max-width: 500px; /* Restrict max size */
+  height: 300px; /* Adjust height for better mobile view */
   background-image: url("../main/asset/landing1.jpg");
-  background-size: cover; /* Ensures the image covers the box */
-  background-position: center; /* Centers the image inside the box */
+  background-size: cover;
+  background-position: center;
 }
 
 /* Styles for box2 */
 .box2 {
-  display: inline;
   border-radius: 20px;
-  border-style: solid;
-  border-color: rgb(0, 0, 0);
-  width: 1000px;
-  height: 500px;
+  border: 1px solid rgb(0, 0, 0);
+  width: 100%; /* Default to full width */
+  max-width: 1000px; /* Restrict max size */
+  height: 300px; /* Adjust height */
   background-image: url("../main/asset/landing2.jpg");
   background-size: cover;
   background-position: center;
 }
+
+/* Responsive design: Adjust for smaller screens */
+@media (max-width: 768px) {
+  .box1, .box2 {
+    max-width: 100%; /* Take full width on smaller screens */
+    height: 200px; /* Reduce height for better fit */
+  }
+}
+
+@media (max-width: 480px) {
+  .box1, .box2 {
+    height: 150px; /* Further reduce height for very small screens */
+  }
+}
+
+
 /* Parent Container for the Air Jordan Items */
 .air-jordan-row {
   display: flex;
   flex-wrap: wrap; /* Allows wrapping on smaller screens */
   gap: 1rem; /* Adds space between the containers */
-  justify-content: flex-start; /* Aligns items to the left */
+  justify-content: center; /* Centers items on smaller screens */
 }
 
 /* Air Jordan Container */
@@ -884,9 +883,10 @@ header {
   border: 1px solid rgba(155, 3, 3, 0.3);
   border-radius: 1rem;
   padding: 1rem;
-  flex: 1 1 calc(33.333% - 1rem); /* Each container takes up 1/3 of the available space */
+  flex: 1 1 calc(33.333% - 1rem); /* Each container takes up 1/3 of the row */
   max-width: 1000px; /* Ensure each item stays within 1/3 of the row */
   display: flex;
+  flex-direction: column; /* Stacks image and content on smaller screens */
   gap: 1rem;
   backdrop-filter: blur(10px); /* Adds blur for a sleek effect */
   margin: 5px;
@@ -900,9 +900,12 @@ header {
 
 /* Air Jordan Image */
 .air-jordan-image {
-  width: 40%;
+  width: 100%; /* Makes the image responsive */
+  max-width: 400px; /* Optional: Limit the max size */
   border-radius: 0.5rem;
   transition: transform 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .air-jordan-container:hover .air-jordan-image {
@@ -911,7 +914,7 @@ header {
 
 /* Air Jordan Content */
 .air-jordan-content {
-  width: 60%;
+  text-align: center; /* Centers text content */
 }
 
 /* Title */
@@ -926,6 +929,7 @@ header {
 .air-jordan-genres {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -953,6 +957,7 @@ header {
 .air-jordan-summary-text {
   color: rgb(170, 170, 170);
   font-size: 0.9rem;
+  text-align: justify;
 }
 
 /* Button Style */
@@ -978,6 +983,39 @@ header {
   transform: translateY(-3px); /* Slight upward movement */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
 }
+
+/* Media Queries for Responsiveness */
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+  .air-jordan-container {
+    flex: 1 1 calc(50% - 1rem); /* Two items per row */
+  }
+
+  .air-jordan-image {
+    width: 100%;
+  }
+
+  .air-jordan-content {
+    width: 100%;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .air-jordan-container {
+    flex: 1 1 100%; /* Full width for single-column layout */
+  }
+
+  .air-jordan-title {
+    font-size: 1.5rem;
+  }
+
+  .air-jordan-summary-text {
+    font-size: 0.8rem;
+  }
+}
+
 .section-header {
   display: flex;
   justify-content: space-between; /* This will push the button to the right */
