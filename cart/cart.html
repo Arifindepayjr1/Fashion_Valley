@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css" />
+  </head>
+  <body>
+    <div class="cart-container">
+      <h1>Shopping Cart</h1>
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Item 1 -->
+          <tr>
+            <td class="product-info">
+              <img
+                src="../SneakerPage/IMG/pngwing.com (2).png"
+                alt="AIR JORDAN 1 'BRED'"
+              />
+              <div>
+                <p class="product-name">AIR JORDAN 1 'BRED'</p>
+                <p class="product-size">Size: 4</p>
+              </div>
+            </td>
+            <td>$200.00</td>
+            <td>
+              <input type="number" min="1" value="1" class="quantity-input" />
+            </td>
+            <td>$200.00</td>
+            <td>
+              <button class="remove-btn">X</button>
+            </td>
+          </tr>
+          <!-- Additional items can be copied here -->
+          <tr>
+            <td class="product-info">
+              <img
+                src="../PantsPage/IMG/1.png"
+                alt="Nike Sportswear Tech Fleece x Central Cee Syna World Joggers"
+              />
+              <div>
+                <p class="product-name">
+                  Nike Sportswear Tech Fleece x Central Cee Syna World Joggers
+                </p>
+                <p class="product-size">Size: M</p>
+              </div>
+            </td>
+            <td>$110.00</td>
+            <td>
+              <input type="number" min="1" value="1" class="quantity-input" />
+            </td>
+            <td>$110.00</td>
+            <td>
+              <button class="remove-btn">X</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="cart-summary">
+        <div class="summary-details">
+          <p>Subtotal: <span>$310.00</span></p>
+          <p>Shipping: <span>$10.00</span></p>
+          <p class="total">Total: <span>$320.00</span></p>
+        </div>
+        <button class="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </body>
+</html>
