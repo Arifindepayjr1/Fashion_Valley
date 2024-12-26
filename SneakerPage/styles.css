@@ -73,46 +73,17 @@ ul.nav-links li a:hover {
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
+    padding: 20px;
   }
 
-  ul.nav-links {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    display: none; /* Hidden by default */
-  }
-
-  ul.nav-links.show {
-    display: flex; /* Show menu when toggled */
-  }
-
-  .menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
+  .search-container {
+    margin-top: 10px;
   }
 }
 
-@media (max-width: 480px) {
-  .navbar-brand {
-    font-size: 1.5rem;
-  }
-
-  ul.nav-links li a {
-    font-size: 0.9rem;
-  }
-
-  .search-input {
-    width: 100px;
-  }
-
-  .search-input:focus {
-    width: 150px;
+@media (max-width: 576px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
   }
 }
 
@@ -257,6 +228,24 @@ body {
 
 .add-to-cart:hover {
   background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* Single column layout for small screens */
+  }
+
+  .product-info {
+    padding: 10px;
+  }
 }
 
 /* General footer styles */
