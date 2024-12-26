@@ -598,6 +598,51 @@ header {
   gap: 20px; /* Adds space between the boxes */
   justify-content: center; /* Centers the content */
 }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0; /* Optional padding around the header */
+}
+
+/* Image Container */
+.pic1 {
+  width: 100%; /* Ensures it spans the container */
+  max-width: 1400px; /* Increased max width for a larger appearance */
+  padding: 0 16px; /* Add some spacing for smaller screens */
+}
+
+/* Responsive Image */
+.pic1 img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove unwanted inline spacing */
+  object-fit: cover; /* Ensures better scaling for non-standard aspect ratios */
+}
+
+/* Optional: Add some responsiveness for larger screens */
+@media (min-width: 1024px) {
+  .pic1 img {
+    transform: scale(1.1); /* Slightly increase the size */
+  }
+}
+
+/* Optional: Add some responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .pic1 {
+    padding: 0 8px;
+  }
+}
+
 
 /* Styles for box1 */
 .box1 {
